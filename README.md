@@ -16,3 +16,8 @@ In other words, (0, 0) is the top left corner of our image. (100, 100) is the bo
 
 5. Display average colour on screen, with name of colour underneath.
 
+Todo:
+- Add an error mechanism to prevent unreachable coordinates being read.
+- Add an error mechanism to prevent a dark area from being selected in wb.
+- Add an error mechanism to prevent a colour correction under or over values.
+
