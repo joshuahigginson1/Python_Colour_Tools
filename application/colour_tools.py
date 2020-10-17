@@ -6,6 +6,10 @@ from modules.average_colour import ave_colour_from_selection
 from modules.white_balance import auto_white_balance
 from modules.image_size import get_size
 
+from modules.colour_name_api import retrieve_colour
+
+import requests
+
 import numpy
 from skimage import io
 
@@ -55,3 +59,4 @@ output = auto_white_balance(ave_colour_value, ave_white_value)
 
 print(f"The colour corrected value is: {output}")
 
+retrieve_colour(output[0], output[1], output[2])
