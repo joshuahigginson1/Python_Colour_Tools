@@ -27,6 +27,8 @@ image = io.imread(IMAGE_PATH)
 
 # First, we find the average colour of our white sheet of paper.
 
+# Our four co-ordinates, read 'backwards'.: [[x,y], [x,y], [x,y], [x,y]]
+
 WHITE_COORDS = [[56, 234], [56, 256], [76, 234], [76, 256]]
 white_selection = numpy.array(WHITE_COORDS)
 
