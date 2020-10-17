@@ -9,6 +9,7 @@ def get_size(image):
     :return: Returns a tuple (width, height)
     """
 
+    # The method .shape returns a list of features about the numpy array.
     shape = image.shape
 
     width = shape[1]

@@ -32,7 +32,6 @@ image_size = get_size(image)
 print(f"The image size is {image_size[0]}x{image_size[1]} pixels.")
 
 # First, we find the average colour of our white sheet of paper.
-
 # Our four co-ordinates, read 'backwards'.: [[x,y], [x,y], [x,y], [x,y]]
 
 WHITE_COORDS = [[56, 234], [56, 256], [76, 234], [76, 256]]
