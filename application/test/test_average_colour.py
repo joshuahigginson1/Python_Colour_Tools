@@ -8,6 +8,9 @@
 
 # Functions ------------------------------------------------------------
 
+def test_ave_colour_from_selection():
+    # TODO: Write test for ave_colour_from_selection.
+    assert 1 == 1
 
 # Methods --------------------------------------------------------------
 

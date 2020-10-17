@@ -4,27 +4,39 @@
 # Functions ------------------------------------------------------------
 
 def auto_white_balance(colour, white):
+    """ This function corrects the white balance of our image.
+    The math is a basic colour correction algorithm from photo stack-exchange.
+    :param colour: The average colour RGB array.
+    :param white: The white balance RGB array.
+    :return: The colour corrected colour RGB array.
+    """
     luminance = (white[0] + white[1] + white[2]) / 3
 
-    print(luminance)
+    # Normalise for Red, Green, and Blue channels.
 
-    colour[0] = clip_colours(colour[0] * luminance / white[0])
-    colour[1] = clip_colours(colour[1] * luminance / white[1])
-    colour[2] = clip_colours(colour[2] * luminance / white[2])
+    for channel in range(2):
+        colour[channel] = clip_colours(colour[channel] * luminance / white[channel])
 
     return colour
 
 
-def clip_colours(value):
-    if value <= 0:
+def clip_colours(colour_value):
+    """ This function ensures that our auto white balance module does not
+    exceed the limits of our RGB spectrum.
+
+    :param colour_value: The value of our colour channel.
+    :return: The normalised value of our colour channel.
+    """
+
+    if colour_value <= 0:
 
         # Value of 0 is absolute black and cannot go lower.
         value = 0
 
-    elif value >= 255:
+    elif colour_value >= 255:
 
         # Value of 255 is absolute white and cannot go higher.
-        value = 255
+        colour_value = 255
 
     # Value must be whole number.
-    return round(value)
+    return round(colour_value)
