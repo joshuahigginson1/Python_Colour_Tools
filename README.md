@@ -10,7 +10,7 @@ A python tool to help identify colours for colourblind people.
 Our co-ordinates are read 'inverted' to how you would usually expect them. 
 In other words, (0, 0) is the top left corner of our image. (100, 100) is the bottom right corner.
 
-![A quick photo representation](.README_images/Coordinate Demonstration.png)
+![A quick photo representation](.README_images/Coordinate_Demonstration.png)
 
 ~~4. Auto White Balance from a known area of grey or white.~~
 
