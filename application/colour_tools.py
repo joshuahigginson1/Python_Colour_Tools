@@ -60,3 +60,5 @@ output = auto_white_balance(ave_colour_value, ave_white_value)
 print(f"The colour corrected value is: {output}")
 
 retrieve_colour(output[0], output[1], output[2])
+
+28, 116, 226
