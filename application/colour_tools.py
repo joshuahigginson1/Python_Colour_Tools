@@ -4,6 +4,7 @@
 
 from modules.average_colour import ave_colour_from_selection
 from modules.white_balance import auto_white_balance
+from modules.image_size import get_size
 
 import numpy
 from skimage import io
@@ -23,7 +24,12 @@ IMAGE_PATH = "test/test_image.png"
 
 # Execute Code ---------------------------------------------------------
 
+# Read our image.
 image = io.imread(IMAGE_PATH)
+
+# Get the size of our image.
+image_size = get_size(image)
+print(f"The image size is {image_size[0]}x{image_size[1]} pixels.")
 
 # First, we find the average colour of our white sheet of paper.
 

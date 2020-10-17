@@ -5,8 +5,6 @@ A python tool to help identify colours for colourblind people.
 
 ~~2. Import picture into Python using Skimage.~~
 
-* Get Picture Size from Image.
-
 ~~3. Select the boxes of colour in which we want to average.~~
 
 Our co-ordinates are read 'inverted' to how you would usually expect them. 
