@@ -18,4 +18,6 @@ In other words, (0, 0) is the top left corner of our image. (100, 100) is the bo
 
 Todo:
 - Add an error mechanism to prevent unreachable coordinates being read.
+- Add error mechanism to prevent 'non white or grey' areas from being selected.
+
 

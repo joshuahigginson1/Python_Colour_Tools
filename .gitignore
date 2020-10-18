@@ -1,4 +1,8 @@
 # Created by .ignore support plugin (hsz.mobi)
+
+
+.pytest_cache
+
 ### macOS template
 # General
 .DS_Store
