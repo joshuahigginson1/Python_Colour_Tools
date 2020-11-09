@@ -24,7 +24,7 @@ from skimage import io
 
 # Define Variables -----------------------------------------------------
 
-IMAGE_PATH = "test/test_image.png"
+IMAGE_PATH = "test/test_images/new_test.png"
 
 # Execute Code ---------------------------------------------------------
 
@@ -38,14 +38,14 @@ print(f"The image size is {image_size[0]}x{image_size[1]} pixels.")
 # First, we find the average colour of our white sheet of paper.
 # Our four co-ordinates, read 'backwards'.: [[x,y], [x,y], [x,y], [x,y]]
 
-WHITE_COORDS = [[56, 234], [56, 256], [76, 234], [76, 256]]
+WHITE_COORDS = [[0, 0], [0, 100], [100, 0], [100, 100]]
 white_selection = numpy.array(WHITE_COORDS)
 
 ave_white_value = ave_colour_from_selection(image, white_selection).tolist()
 
 # Now, find the colour we want to sample.
 
-COLOUR_COORDS = [[0, 52], [52, 0], [75, 52], [52, 75]]
+COLOUR_COORDS = [[0, 100], [0, 200], [100, 200], [100, 100]]
 colour_selection = numpy.array(COLOUR_COORDS)
 
 ave_colour_value = ave_colour_from_selection(image, colour_selection).tolist()
